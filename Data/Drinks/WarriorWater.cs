@@ -15,7 +15,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the price of the drink
         /// </summary>
-        price double price = 0;
+        private double price = 0;
         public double Price
         {
             get
