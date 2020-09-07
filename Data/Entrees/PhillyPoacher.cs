@@ -55,7 +55,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <returns>A description</returns>
         public override string ToString()
         {
-            return "Briarheart Burger";
+            return "Philly Poacher";
         }
     }
 }

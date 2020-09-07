@@ -20,10 +20,6 @@ namespace BleakwindBuffet.Data.Drinks
         {
             get
             {
-                return price;
-            }
-            set
-            {
                 if (Size == Size.Small)
                 {
                     price = .75;
@@ -36,6 +32,11 @@ namespace BleakwindBuffet.Data.Drinks
                 {
                     price = 1.75;
                 }
+                return price;
+            }
+            set
+            {
+                
             }
         }
 
@@ -46,10 +47,6 @@ namespace BleakwindBuffet.Data.Drinks
         public double Calories
         {
             get
-            {
-                return calories;
-            }
-            set
             {
                 if (Size == Size.Small)
                 {
@@ -63,6 +60,11 @@ namespace BleakwindBuffet.Data.Drinks
                 {
                     calories = 20;
                 }
+                return calories;
+            }
+            set
+            {
+                
             }
         }
 
@@ -74,7 +76,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets if the drink has a cream
         /// </summary>
-        public bool RoomForCream { get; set; } = false;
+        public bool RoomForCream { get; set; } = true;
 
         /// <summary>
         /// Gets if the drink has a decaf
@@ -104,7 +106,12 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns>A description</returns>
         public override string ToString()
         {
+            if (Decaf)
+            {
+                return $"{Size} Decaf Candlehearth Coffee";
+            }
             return $"{Size} Candlehearth Coffee";
+
         }
     }
 }
