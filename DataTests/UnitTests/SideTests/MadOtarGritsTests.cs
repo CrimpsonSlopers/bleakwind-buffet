@@ -19,7 +19,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             MadOtarGrits side = new MadOtarGrits();
             Assert.Equal(Size.Small, side.Size);
         }
-                
+
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
@@ -70,4 +70,5 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             side.Size = size;
             Assert.Equal(name, side.ToString());
         }
+    }
 }
