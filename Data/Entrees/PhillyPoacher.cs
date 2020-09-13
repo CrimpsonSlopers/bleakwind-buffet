@@ -1,20 +1,21 @@
-﻿using System;
+﻿using BleakwindBuffet.Data.Menu;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    public class PhillyPoacher
+    public class PhillyPoacher : Entree, IOrderItem
     {
         /// <summary>
         /// Gets the price of the philly
         /// </summary>
-        public double Price => 7.23;
+        public override double Price => 7.23;
 
         /// <summary>
         /// Gets the calories of the philly
         /// </summary>
-        public uint Calories => 784;
+        public override uint Calories => 784;
 
         /// <summary>
         /// Gets if the philly has a sirloin
@@ -35,7 +36,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// Gets special instructions for the philly
         /// </summary>
         private List<string> specialInstructions = new List<string>();
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

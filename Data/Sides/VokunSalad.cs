@@ -1,22 +1,18 @@
 ﻿using BleakwindBuffet.Data.Enums;
+using BleakwindBuffet.Data.Menu;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Sides
 {
-    public class VokunSalad
+    public class VokunSalad : Side, IOrderItem
     {
-        /// <summary>
-        /// Gets the size of the side
-        /// </summary>
-        public Size Size { get; set; } = Size.Small;
-
         /// <summary>
         /// Gets the price of the side
         /// </summary>
         private double price = .93;
-        public double Price
+        public override double Price
         {
             get
             {
@@ -34,17 +30,23 @@ namespace BleakwindBuffet.Data.Sides
                 }
                 return price;
             }
-            set
+        }
+
+        public override List<string> SpecialInstructions
+        {
+            get
             {
-                
+                List<string> instructions = new List<string>();
+
+                return instructions;
             }
         }
 
         /// <summary>
         /// Gets the calories of the side
         /// </summary>
-        private double calories = 41;
-        public double Calories
+        private uint calories = 41;
+        public override uint Calories
         {
             get
             {
@@ -61,10 +63,6 @@ namespace BleakwindBuffet.Data.Sides
                     calories = 73;
                 }
                 return calories;
-            }
-            set
-            {
-                
             }
         }
 

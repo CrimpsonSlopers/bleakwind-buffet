@@ -12,6 +12,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
     public class ThugsTBoneTests
     {
+
+        [Fact]
+        public void ShouldBeADrink()
+        {
+            ThugsTBone entree = new ThugsTBone();
+            Assert.IsAssignableFrom<Entree>(entree);
+        }
+
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
